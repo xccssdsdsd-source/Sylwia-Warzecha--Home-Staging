@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>styli_staging | Sylwia Warzecha | Home Staging</title>
+  <meta name="description" content="Pomagam właścicielom i inwestorom przygotować nieruchomość pod szybszą sprzedaż i uzyskać lepszą cenę. Home staging we Wrocławiu i online.">
+  <meta name="theme-color" content="#F5F0EB">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="styli_staging | Sylwia Warzecha">
+  <meta property="og:description" content="Home staging dla właścicieli i inwestorów. Wnętrza przygotowane pod szybszą sprzedaż i lepszą cenę.">
+  <meta property="og:image" content="images/ImageDownloader_www.instagram.com_659208231_17858391087652201_8787600169164779100_n.jpg">
+  <meta property="og:locale" content="pl_PL">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="styli_staging | Sylwia Warzecha">
+  <meta name="twitter:description" content="Premium home staging we Wrocławiu i online.">
+  <meta name="twitter:image" content="images/ImageDownloader_www.instagram.com_659208231_17858391087652201_8787600169164779100_n.jpg">
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+  <style>
+    :root {
+      --sand: #F5F0EB;
+      --taupe: #C4A882;
+      --taupe-deep: #A98B67;
+      --ink: #3A3A3A;
+      --ink-soft: #5E5752;
+      --card: rgba(255, 255, 255, 0.82);
+      --card-solid: #FFFFFF;
+      --line: rgba(58, 58, 58, 0.1);
+      --shadow-soft: 0 18px 48px rgba(91, 72, 51, 0.12);
+      --shadow-hover: 0 22px 54px rgba(91, 72, 51, 0.18);
+      --radius: 8px;
+      --section-space: clamp(5rem, 8vw, 8rem);
+      --wrap: min(1180px, calc(100vw - 2rem));
+      --hero-offset: 0px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(196, 168, 130, 0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(196, 168, 130, 0.12), transparent 28%),
+        linear-gradient(180deg, #FAF6F2 0%, #F5F0EB 34%, #F8F3EF 100%);
+      font-family: "Source Sans 3", "Lato", "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(0);
+    }
+
+    body::before {
+      top: -12rem;
+      right: -9rem;
+      width: 24rem;
+      height: 24rem;
+      background: radial-gradient(circle, rgba(196, 168, 130, 0.22), transparent 70%);
+    }
+
+    body::after {
+      bottom: -10rem;
+      left: -8rem;
+      width: 20rem;
+      height: 20rem;
+      background: radial-gradient(circle, rgba(196, 168, 130, 0.16), transparent 68%);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .page-shell {
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      width: var(--wrap);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.45rem 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(14px);
+      color: rgba(255, 255, 255, 0.92);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.74rem;
+      font-weight: 600;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: var(--taupe);
+      box-shadow: 0 0 0 0.4rem rgba(196, 168, 130, 0.16);
+    }
+
+    .section {
+      position: relative;
+      padding: var(--section-space) 0;
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: clamp(2rem, 4vw, 3.5rem);
+    }
+
+    .section-tag {
+      margin: 0;
+      color: var(--taupe-deep);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      font-weight: 600;
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      font-size: clamp(3.4rem, 9vw, 7.25rem);
+      max-width: 10ch;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      max-width: 12ch;
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 2vw, 1.6rem);
+    }
+
+    p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 1.02rem;
+    }
+
+    .lede {
+      font-size: clamp(1.08rem, 1.8vw, 1.3rem);
+      max-width: 38rem;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .btn,
+    .ghost-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      padding: 0.95rem 1.45rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn {
+      color: #fff;
+      background: linear-gradient(135deg, var(--taupe) 0%, var(--taupe-deep) 100%);
+      box-shadow: 0 16px 34px rgba(169, 139, 103, 0.28);
+    }
+
+    .ghost-btn {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.26);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn:hover,
+    .btn:focus-visible,
+    .ghost-btn:hover,
+    .ghost-btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 36px rgba(91, 72, 51, 0.18);
+      outline: none;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 20;
+      transition: background-color 220ms ease, box-shadow 220ms ease, backdrop-filter 220ms ease;
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(248, 243, 239, 0.78);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 12px 32px rgba(91, 72, 51, 0.08);
+    }
+
+    .nav-wrap {
+      width: var(--wrap);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .site-header.is-scrolled .brand,
+    .site-header.is-scrolled .nav-links a,
+    .site-header.is-scrolled .menu-toggle {
+      color: var(--ink);
+    }
+
+    .brand-mark {
+      width: 2.85rem;
+      height: 2.85rem;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 12px 28px rgba(58, 58, 58, 0.16);
+    }
+
+    .brand-text {
+      display: grid;
+      gap: 0.1rem;
+      line-height: 1.1;
+    }
+
+    .brand-text small {
+      font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+      font-weight: 700;
+      opacity: 0.75;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .nav-links a {
+      position: relative;
+      font-size: 0.98rem;
+      transition: color 220ms ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.4rem;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 220ms ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .nav-cta {
+      padding: 0.85rem 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 2.8rem;
+      height: 2.8rem;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      backdrop-filter: blur(12px);
+    }
+
+    .menu-toggle svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .menu-toggle svg path {
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+      stroke-linecap: round;
+    }
+
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      align-items: stretch;
+      position: relative;
+      isolation: isolate;
+      overflow: clip;
+      color: #fff;
+    }
+
+    .hero-media,
+    .hero-grain,
+    .hero-wash {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-media {
+      background-position: center;
+      background-size: cover;
+      transform: translate3d(0, var(--hero-offset), 0) scale(1.08);
+      will-change: transform;
+      transition: transform 120ms linear;
+    }
+
+    .hero-wash {
+      background:
+        linear-gradient(115deg, rgba(34, 33, 31, 0.56) 0%, rgba(34, 33, 31, 0.12) 40%, rgba(245, 240, 235, 0.18) 100%),
+        radial-gradient(circle at right top, rgba(196, 168, 130, 0.26), transparent 32%);
+    }
+
+    .hero-grain {
+      opacity: 0.18;
+      mix-blend-mode: soft-light;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: var(--wrap);
+      margin: 0 auto;
+      display: grid;
+      align-items: end;
+      padding: clamp(7rem, 10vw, 10rem) 0 clamp(2rem, 4vw, 3rem);
+      min-height: 100svh;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.7fr);
+      align-items: end;
+    }
+
+    .hero-copy {
+      display: grid;
+      gap: 1.4rem;
+      max-width: 45rem;
+      animation: hero-fade 950ms ease forwards;
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .hero-copy .title-break {
+      display: block;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 0.7rem;
+    }
+
+    .hero-panel {
+      justify-self: end;
+      align-self: end;
+      max-width: 22rem;
+      padding: 1.4rem;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: calc(var(--radius) * 2);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 40px rgba(29, 26, 24, 0.16);
+      animation: hero-fade 1100ms 120ms ease forwards;
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .hero-panel-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-panel-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .hero-panel strong {
+      display: block;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .hero-metric {
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .hero-metric span {
+      display: block;
+      color: rgba(255, 255, 255, 0.66);
+      font-size: 0.9rem;
+    }
+
+    .hero-metric strong {
+      margin-bottom: 0.3rem;
+      font-size: 1.4rem;
+      font-family: "Playfair Display", Georgia, serif;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: clamp(2rem, 4vw, 3.5rem);
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.92rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-bottom .scroll-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .hero-bottom .scroll-hint::before {
+      content: "";
+      width: 1.9rem;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      gap: clamp(1.5rem, 3vw, 2.4rem);
+      grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+      align-items: center;
+    }
+
+    .photo-card,
+    .contact-card,
+    .service-card,
+    .reason-card,
+    .project-card {
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.62);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(10px);
+    }
+
+    .photo-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 32rem;
+    }
+
+    .photo-card::before {
+      content: "";
+      position: absolute;
+      inset: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: calc(var(--radius) * 1.6);
+      pointer-events: none;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-copy {
+      display: grid;
+      gap: 1.35rem;
+    }
+
+    .about-copy p {
+      max-width: 42rem;
+    }
+
+    .about-aside {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 0.6rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.62rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink);
+      font-size: 0.92rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      gap: 1.3rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .project-card {
+      overflow: hidden;
+      transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+    }
+
+    .project-card:hover,
+    .project-card:focus-within {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(196, 168, 130, 0.46);
+    }
+
+    .project-media {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(196, 168, 130, 0.28), rgba(255, 255, 255, 0.6));
+    }
+
+    .project-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(58, 58, 58, 0.02), rgba(58, 58, 58, 0.12));
+    }
+
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 300ms ease;
+    }
+
+    .project-card:hover .project-media img,
+    .project-card:focus-within .project-media img {
+      transform: scale(1.06);
+    }
+
+    .project-body {
+      padding: 1.25rem 1.2rem 1.35rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .project-body p {
+      font-size: 0.98rem;
+    }
+
+    .project-kicker {
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.35rem 0.62rem;
+      border-radius: 999px;
+      background: rgba(196, 168, 130, 0.14);
+      color: var(--taupe-deep);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .services-grid,
+    .reasons-grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .service-card,
+    .reason-card,
+    .contact-card {
+      padding: 1.5rem;
+    }
+
+    .service-card {
+      display: grid;
+      gap: 1rem;
+      min-height: 100%;
+      transition: transform 220ms ease, box-shadow 220ms ease;
+    }
+
+    .service-card:hover,
+    .service-card:focus-within {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(196, 168, 130, 0.24), rgba(255, 255, 255, 0.84));
+      color: var(--taupe-deep);
+      box-shadow: inset 0 0 0 1px rgba(196, 168, 130, 0.18);
+    }
+
+    .icon-wrap svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .reason-card {
+      display: grid;
+      gap: 0.9rem;
+      min-height: 100%;
+    }
+
+    .reason-card .icon-wrap {
+      width: 2.9rem;
+      height: 2.9rem;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 1.2rem;
+      align-content: start;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .field {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    label {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.95rem 1rem;
+      border: 1px solid rgba(58, 58, 58, 0.12);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--ink);
+      transition: border-color 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: rgba(196, 168, 130, 0.88);
+      box-shadow: 0 0 0 4px rgba(196, 168, 130, 0.16);
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 11rem;
+      resize: vertical;
+    }
+
+    .form-note,
+    .contact-note {
+      font-size: 0.92rem;
+    }
+
+    .form-success {
+      display: none;
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius);
+      background: rgba(196, 168, 130, 0.14);
+      color: var(--ink);
+      border: 1px solid rgba(196, 168, 130, 0.22);
+    }
+
+    .form-success.is-visible {
+      display: block;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .info-item {
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .info-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .info-item span {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--taupe-deep);
+    }
+
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+    }
+
+    .instagram-link svg {
+      width: 1.15rem;
+      height: 1.15rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+    }
+
+    .site-footer {
+      padding: 1.5rem 0 2.2rem;
+    }
+
+    .footer-bar {
+      width: var(--wrap);
+      margin: 0 auto;
+      padding-top: 1.4rem;
+      border-top: 1px solid rgba(58, 58, 58, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      color: var(--ink-soft);
+      font-size: 0.94rem;
+    }
+
+    .footer-bar a {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 760ms ease, transform 760ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .divider-orb {
+      position: absolute;
+      right: min(6vw, 3rem);
+      top: clamp(1rem, 4vw, 2rem);
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196, 168, 130, 0.22), rgba(196, 168, 130, 0) 68%);
+      pointer-events: none;
+    }
+
+    @keyframes hero-fade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .services-grid,
+      .reasons-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-panel {
+        justify-self: stretch;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-wrap {
+        padding: 0.8rem 0;
+      }
+
+      .nav-actions {
+        gap: 0.65rem;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 0.55rem);
+        left: 50%;
+        transform: translateX(-50%) translateY(-0.45rem);
+        width: var(--wrap);
+        padding: 1rem;
+        border-radius: calc(var(--radius) * 2);
+        background: rgba(248, 243, 239, 0.96);
+        border: 1px solid rgba(58, 58, 58, 0.08);
+        box-shadow: 0 20px 44px rgba(91, 72, 51, 0.12);
+        color: var(--ink);
+        display: grid;
+        gap: 0.4rem;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 220ms ease, transform 220ms ease, visibility 220ms ease;
+      }
+
+      .nav-links.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .nav-links a {
+        padding: 0.7rem 0.35rem;
+      }
+
+      .hero-inner {
+        padding-top: 7.5rem;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .portfolio-grid,
+      .services-grid,
+      .reasons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions,
+      .footer-bar,
+      .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .photo-card {
+        min-height: 24rem;
+      }
+
+      .section {
+        padding: 4.5rem 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .hero-media,
+      .reveal,
+      .hero-copy,
+      .hero-panel {
+        transform: none !important;
+        opacity: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" id="top">
+      <div class="nav-wrap">
+        <a class="brand" href="#hero" aria-label="Przejdź do początku strony">
+          <img class="brand-mark" src="logo.jpg" alt="Portret Sylwii Warzechy">
+          <span class="brand-text">
+            <span>styli_staging</span>
+            <small>Home Staging</small>
+          </span>
+        </a>
+
+        <nav class="nav-links" id="site-menu" aria-label="Główna nawigacja">
+          <a href="#o-mnie">O mnie</a>
+          <a href="#realizacje">Realizacje</a>
+          <a href="#oferta">Oferta</a>
+          <a href="#dlaczego">Dlaczego warto</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn nav-cta" href="#kontakt">Umów konsultację</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Otwórz menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <!-- TU WKLEJ LINK DO ZDJĘCIA HERO -->
+        <div class="hero-media" style="background-image: url('images/ImageDownloader_www.instagram.com_659208231_17858391087652201_8787600169164779100_n.jpg');"></div>
+        <div class="hero-wash"></div>
+        <div class="hero-grain"></div>
+
+        <div class="hero-inner">
+          <div>
+            <div class="hero-grid">
+              <div class="hero-copy">
+                <span class="eyebrow">Wrocław | online</span>
+                <h1>
+                  Sylwia
+                  <span class="title-break">Warzecha</span>
+                </h1>
+                <p class="lede">Pomagam właścicielom i inwestorom przygotować nieruchomość pod szybszą sprzedaż i uzyskać lepszą cenę.</p>
+                <div class="hero-actions">
+                  <a class="btn" href="#kontakt">Umów konsultację</a>
+                  <a class="ghost-btn" href="https://www.instagram.com/styli_staging/" target="_blank" rel="noreferrer">Zobacz Instagram</a>
+                </div>
+              </div>
+
+              <aside class="hero-panel" aria-label="Skrót oferty">
+                <div class="hero-panel-top">
+                  <div>
+                    <span class="hero-panel-label">Specjalizacja</span>
+                    <strong>Home Staging</strong>
+                  </div>
+                  <span class="hero-panel-label">Premium</span>
+                </div>
+                <p>Estetyka, która porządkuje odbiór wnętrza, wydobywa jego potencjał i buduje wrażenie gotowości do zakupu od pierwszego wejścia.</p>
+                <div class="hero-metrics">
+                  <div class="hero-metric">
+                    <strong>01</strong>
+                    <span>sprzedaż szybciej przygotowana do prezentacji</span>
+                  </div>
+                  <div class="hero-metric">
+                    <strong>02</strong>
+                    <span>spójny standard wizualny dla inwestorów</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
+
+            <div class="hero-bottom">
+              <span>styli_staging</span>
+              <span class="scroll-hint">Scroll, aby zobaczyć ofertę</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="o-mnie">
+        <div class="divider-orb" aria-hidden="true"></div>
+        <div class="container about-grid">
+          <div class="photo-card reveal">
+            <!-- TU WKLEJ LINK DO ZDJĘCIA PROFILOWEGO -->
+            <img src="logo.jpg" alt="Sylwia Warzecha">
+          </div>
+
+          <div class="about-copy reveal">
+            <div class="section-heading">
+              <p class="section-tag">O mnie</p>
+              <h2>Wnętrza, które od razu budują właściwe pierwsze wrażenie.</h2>
+            </div>
+
+            <p>Od kilku lat pracuję z mieszkaniami i apartamentami, którym trzeba nadać klarowny, dopracowany i sprzedażowy charakter. Tworzę aranżacje oparte na świetle, proporcji, porządku wizualnym i detalach, które podnoszą odbiór nieruchomości bez zbędnego przepychu.</p>
+            <p>Współpracuję zarówno z właścicielami, jak i inwestorami, prowadząc ich przez proces przygotowania wnętrza do sesji, prezentacji i wejścia na rynek. Zależy mi na spokojnej komunikacji, estetyce premium i decyzjach, które realnie wspierają szybszą sprzedaż lub wynajem.</p>
+
+            <div class="about-aside">
+              <span class="pill">estetyka premium</span>
+              <span class="pill">praca z inwestorami</span>
+              <span class="pill">konsultacje online</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="realizacje">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Realizacje</p>
+            <h2>Wybrane kadry z wnętrz przygotowanych do dobrego odbioru.</h2>
+            <p>Karty korzystają z lokalnych zdjęć, a w kodzie pozostawiono wyraźne komentarze do szybkiej podmiany na finalne linki.</p>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="project-card reveal">
+              <div class="project-media">
+                <!-- TU WKLEJ LINK DO ZDJĘCIA -->
+                <img src="images/ImageDownloader_www.instagram.com_659208231_17858391087652201_8787600169164779100_n.jpg" alt="Metamorfoza apartamentu we Wrocławiu" loading="lazy">
+              </div>
+              <div class="project-body">
+                <span class="project-kicker">sprzedaż</span>
+                <h3>Metamorfoza apartamentu – Wrocław</h3>
+                <p>Jasne tony, miękkie kontrasty i naturalne drewno, które nadają wnętrzu świeżość i poczucie gotowości do zamieszkania.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-media">
+                <!-- TU WKLEJ LINK DO ZDJĘCIA -->
+                <img src="images/ImageDownloader_www.instagram.com_587794059_17843378643652201_433269093588530281_n.jpg" alt="Sypialnia po home stagingu" loading="lazy">
+              </div>
+              <div class="project-body">
+                <span class="project-kicker">premium</span>
+                <h3>Sypialnia pokazowa – soft luxury</h3>
+                <p>Warstwowe tekstylia, światło nastrojowe i spokojna paleta, która pozwala odbiorcy od razu zobaczyć komfort tego wnętrza.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-media">
+                <!-- TU WKLEJ LINK DO ZDJĘCIA -->
+                <img src="images/ImageDownloader_www.instagram.com_610582990_17846423172652201_2877141047669115330_n.jpg" alt="Jadalnia przygotowana pod wynajem" loading="lazy">
+              </div>
+              <div class="project-body">
+                <span class="project-kicker">wynajem</span>
+                <h3>Strefa jadalni – szybki odbiór</h3>
+                <p>Minimalna interwencja, która ociepla przestrzeń i nadaje jej bardziej uporządkowany, świadomie zaprojektowany charakter.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-media">
+                <!-- TU WKLEJ LINK DO ZDJĘCIA -->
+                <img src="images/ImageDownloader_www.instagram.com_589905664_17844002238652201_6248685034852876760_n.jpg" alt="Łazienka po przygotowaniu do prezentacji" loading="lazy">
+              </div>
+              <div class="project-body">
+                <span class="project-kicker">detal</span>
+                <h3>Łazienka – porządek i czystość formy</h3>
+                <p>Neutralne tło, mocniejsza stolarka i dopracowane dodatki tworzą kadr, który wygląda świeżo i bardziej wartościowo.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-media">
+                <!-- TU WKLEJ LINK DO ZDJĘCIA -->
+                <img src="images/ImageDownloader_www.instagram.com_587308838_17843729289652201_2222312462436061140_n.jpg" alt="Detal aranżacyjny home stagingu" loading="lazy">
+              </div>
+              <div class="project-body">
+                <span class="project-kicker">stylizacja</span>
+                <h3>Detal, który domyka kompozycję</h3>
+                <p>Starannie dobrane akcesoria pomagają nadać wnętrzu rytm, miękkość i bardziej premium odbiór podczas prezentacji.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-media">
+                <!-- TU WKLEJ LINK DO ZDJĘCIA -->
+                <img src="images/ImageDownloader_www.instagram.com_619088476_17847937719652201_9118780561396198109_n.jpg" alt="Strefa wypoczynkowa po stylizacji" loading="lazy">
+              </div>
+              <div class="project-body">
+                <span class="project-kicker">mood</span>
+                <h3>Strefa wypoczynkowa – lekkość i światło</h3>
+                <p>Miękkie faktury, świeże kolory i bardziej fotogeniczny układ, który wzmacnia emocjonalny odbiór całej nieruchomości.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="oferta">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Oferta</p>
+            <h2>Zakres współpracy dopasowany do właścicieli i inwestorów.</h2>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <span class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 10.5 12 3l9 7.5"></path>
+                  <path d="M5.5 9.5V20h13V9.5"></path>
+                  <path d="M9.5 20v-6h5v6"></path>
+                </svg>
+              </span>
+              <h3>Home staging sprzedażowy</h3>
+              <p>Przygotowanie wnętrza do wejścia na rynek tak, by zdjęcia, prezentacje i oględziny pracowały na korzyść oferty.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 6.5h16"></path>
+                  <path d="M6 6.5V18h12V6.5"></path>
+                  <path d="M9 11h6"></path>
+                  <path d="M9 14.5h6"></path>
+                </svg>
+              </span>
+              <h3>Przygotowanie pod wynajem</h3>
+              <p>Uporządkowanie i dopracowanie nieruchomości tak, aby szybciej przyciągała najemców i wyglądała spójnie w ogłoszeniu.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 5h16v10H4z"></path>
+                  <path d="M8 19h8"></path>
+                  <path d="M12 15v4"></path>
+                </svg>
+              </span>
+              <h3>Konsultacje online</h3>
+              <p>Analiza wnętrza, lista rekomendacji i konkretne wskazówki do wdrożenia zdalnie, krok po kroku i bez chaosu.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                  <path d="M17 14a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
+                  <path d="M3.5 20a5.5 5.5 0 0 1 11 0"></path>
+                  <path d="M14.5 20a4.5 4.5 0 0 1 7 0"></path>
+                </svg>
+              </span>
+              <h3>Współpraca z inwestorami</h3>
+              <p>Estetyka podporządkowana celowi biznesowemu: sprzedaży, wynajmowi lub budowaniu spójnego standardu w kolejnych lokalach.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="dlaczego">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Dlaczego warto</p>
+            <h2>Dobre przygotowanie nieruchomości podnosi nie tylko estetykę, ale też siłę oferty.</h2>
+          </div>
+
+          <div class="reasons-grid">
+            <article class="reason-card reveal">
+              <span class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="m5 13 4 4L19 7"></path>
+                </svg>
+              </span>
+              <h3>Szybsza sprzedaż</h3>
+              <p>Wnętrze czytelne wizualnie łatwiej przyciąga uwagę i skraca drogę od ogłoszenia do konkretnego zainteresowania.</p>
+            </article>
+
+            <article class="reason-card reveal">
+              <span class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3v18"></path>
+                  <path d="M16 7.5c0-1.9-1.8-3.5-4-3.5S8 5.6 8 7.5s1.6 3 4 3 4 1.2 4 3S14.2 17 12 17s-4-1.6-4-3.5"></path>
+                </svg>
+              </span>
+              <h3>Wyższa cena</h3>
+              <p>Spójny odbiór jakości pomaga uzasadnić lepszą wycenę i ogranicza wrażenie, że nieruchomość wymaga pilnych poprawek.</p>
+            </article>
+
+            <article class="reason-card reveal">
+              <span class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 19h16"></path>
+                  <path d="M7 19V9"></path>
+                  <path d="M12 19V5"></path>
+                  <path d="M17 19v-7"></path>
+                </svg>
+              </span>
+              <h3>Estetyka premium</h3>
+              <p>Detale, światło i kompozycja budują klimat, który pozwala odczuć większą wartość wnętrza już na pierwszych zdjęciach.</p>
+            </article>
+
+            <article class="reason-card reveal">
+              <span class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3 4 7v5c0 5 3.4 7.9 8 9 4.6-1.1 8-4 8-9V7l-8-4Z"></path>
+                  <path d="m9.5 12 1.7 1.7 3.8-4"></path>
+                </svg>
+              </span>
+              <h3>Doświadczenie</h3>
+              <p>Praca z różnymi typami nieruchomości pozwala szybciej ocenić, co naprawdę warto zmienić, a co zostawić w spokoju.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="kontakt">
+        <div class="container contact-grid">
+          <div class="contact-card reveal">
+            <div class="section-heading">
+              <p class="section-tag">Kontakt</p>
+              <h2>Porozmawiajmy o wnętrzu, które ma sprzedawać się lepiej.</h2>
+            </div>
+
+            <!-- TU PODŁĄCZ DOCZELOWY BACKEND FORMULARZA LUB MAIL API -->
+            <form id="contact-form" action="#" method="post">
+              <div class="field">
+                <label for="name">Imię</label>
+                <input id="name" name="name" type="text" placeholder="Jak masz na imię?" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="twoj@email.pl" required>
+              </div>
+
+              <div class="field">
+                <label for="message">Wiadomość</label>
+                <textarea id="message" name="message" placeholder="Napisz kilka słów o nieruchomości i zakresie wsparcia." required></textarea>
+              </div>
+
+              <button class="btn" type="submit">Wyślij</button>
+              <p class="form-note">Formularz jest gotowy wizualnie i w JS. Wystarczy podpiąć finalny adres obsługi wiadomości.</p>
+              <div class="form-success" id="form-success" role="status" aria-live="polite">
+                Dziękuję. Formularz działa demonstracyjnie i jest gotowy do podpięcia pod Twój docelowy system kontaktowy.
+              </div>
+            </form>
+          </div>
+
+          <aside class="contact-card reveal">
+            <h3>Współpraca</h3>
+            <p class="contact-note">Pracuję z właścicielami mieszkań, inwestorami i klientami przygotowującymi nieruchomość pod sprzedaż lub wynajem. Współpraca może odbywać się stacjonarnie we Wrocławiu albo online.</p>
+
+            <div class="info-list">
+              <div class="info-item">
+                <span>Lokalizacja</span>
+                <p>Wrocław | online</p>
+              </div>
+
+              <div class="info-item">
+                <span>Instagram</span>
+                <a class="instagram-link" href="https://www.instagram.com/styli_staging/" target="_blank" rel="noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="17.5" cy="6.5" r="1"></circle>
+                  </svg>
+                  @styli_staging
+                </a>
+              </div>
+
+              <div class="info-item">
+                <span>Zakres</span>
+                <p>Home staging sprzedażowy, przygotowanie pod wynajem, konsultacje online i współpraca z inwestorami.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-bar">
+        <span>© 2025 styli_staging | Sylwia Warzecha</span>
+        <a href="https://www.instagram.com/styli_staging/" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const header = document.querySelector('.site-header');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const siteMenu = document.querySelector('#site-menu');
+    const hero = document.querySelector('.hero');
+    const heroMedia = document.querySelector('.hero-media');
+    const form = document.querySelector('#contact-form');
+    const successBox = document.querySelector('#form-success');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const updateHeaderState = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 12);
+    };
+
+    const closeMenu = () => {
+      siteMenu.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Otwórz menu');
+    };
+
+    updateHeaderState();
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = siteMenu.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Zamknij menu' : 'Otwórz menu');
+    });
+
+    siteMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!siteMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    if (!reduceMotion && hero && heroMedia) {
+      const updateParallax = () => {
+        const rect = hero.getBoundingClientRect();
+        const offset = Math.max(-36, Math.min(36, rect.top * -0.08));
+        heroMedia.style.setProperty('--hero-offset', offset + 'px');
+        heroMedia.style.transform = `translate3d(0, ${offset}px, 0) scale(1.08)`;
+      };
+
+      updateParallax();
+      window.addEventListener('scroll', updateParallax, { passive: true });
+      window.addEventListener('resize', updateParallax);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.18,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach((element) => {
+      observer.observe(element);
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      successBox.classList.add('is-visible');
+      form.reset();
+    });
+  </script>
+</body>
+</html>

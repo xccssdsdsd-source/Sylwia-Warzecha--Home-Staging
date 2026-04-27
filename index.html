@@ -143,6 +143,19 @@
       margin-bottom: clamp(2rem, 4vw, 3.5rem);
     }
 
+    .blur-copy {
+      filter: blur(3.6px);
+      opacity: 0.68;
+      transition: filter 240ms ease, opacity 240ms ease;
+      user-select: none;
+    }
+
+    .blur-copy:hover,
+    .blur-copy:focus-visible {
+      filter: blur(0);
+      opacity: 1;
+    }
+
     .section-tag {
       margin: 0;
       color: var(--taupe-deep);
@@ -1086,8 +1099,8 @@
               <h2>Wnętrza, które od razu budują właściwe pierwsze wrażenie.</h2>
             </div>
 
-            <p>Od kilku lat pracuję z mieszkaniami i apartamentami, którym trzeba nadać klarowny, dopracowany i sprzedażowy charakter. Tworzę aranżacje oparte na świetle, proporcji, porządku wizualnym i detalach, które podnoszą odbiór nieruchomości bez zbędnego przepychu.</p>
-            <p>Współpracuję zarówno z właścicielami, jak i inwestorami, prowadząc ich przez proces przygotowania wnętrza do sesji, prezentacji i wejścia na rynek. Zależy mi na spokojnej komunikacji, estetyce premium i decyzjach, które realnie wspierają szybszą sprzedaż lub wynajem.</p>
+            <p class="blur-copy">Od kilku lat pracuję z mieszkaniami i apartamentami, którym trzeba nadać klarowny, dopracowany i sprzedażowy charakter. Tworzę aranżacje oparte na świetle, proporcji, porządku wizualnym i detalach, które podnoszą odbiór nieruchomości bez zbędnego przepychu.</p>
+            <p class="blur-copy">Współpracuję zarówno z właścicielami, jak i inwestorami, prowadząc ich przez proces przygotowania wnętrza do sesji, prezentacji i wejścia na rynek. Zależy mi na spokojnej komunikacji, estetyce premium i decyzjach, które realnie wspierają szybszą sprzedaż lub wynajem.</p>
 
             <div class="about-aside">
               <span class="pill">estetyka premium</span>
@@ -1103,7 +1116,7 @@
           <div class="section-heading reveal">
             <p class="section-tag">Realizacje</p>
             <h2>Wybrane kadry z wnętrz przygotowanych do dobrego odbioru.</h2>
-            <p>Karty korzystają z lokalnych zdjęć, a w kodzie pozostawiono wyraźne komentarze do szybkiej podmiany na finalne linki.</p>
+            <p class="blur-copy">Karty korzystają z lokalnych zdjęć, a w kodzie pozostawiono wyraźne komentarze do szybkiej podmiany na finalne linki.</p>
           </div>
 
           <div class="portfolio-grid">
@@ -1115,7 +1128,7 @@
               <div class="project-body">
                 <span class="project-kicker">sprzedaż</span>
                 <h3>Metamorfoza apartamentu – Wrocław</h3>
-                <p>Jasne tony, miękkie kontrasty i naturalne drewno, które nadają wnętrzu świeżość i poczucie gotowości do zamieszkania.</p>
+                <p class="blur-copy">Jasne tony, miękkie kontrasty i naturalne drewno, które nadają wnętrzu świeżość i poczucie gotowości do zamieszkania.</p>
               </div>
             </article>
 
@@ -1127,7 +1140,7 @@
               <div class="project-body">
                 <span class="project-kicker">premium</span>
                 <h3>Sypialnia pokazowa – soft luxury</h3>
-                <p>Warstwowe tekstylia, światło nastrojowe i spokojna paleta, która pozwala odbiorcy od razu zobaczyć komfort tego wnętrza.</p>
+                <p class="blur-copy">Warstwowe tekstylia, światło nastrojowe i spokojna paleta, która pozwala odbiorcy od razu zobaczyć komfort tego wnętrza.</p>
               </div>
             </article>
 
@@ -1139,7 +1152,7 @@
               <div class="project-body">
                 <span class="project-kicker">wynajem</span>
                 <h3>Strefa jadalni – szybki odbiór</h3>
-                <p>Minimalna interwencja, która ociepla przestrzeń i nadaje jej bardziej uporządkowany, świadomie zaprojektowany charakter.</p>
+                <p class="blur-copy">Minimalna interwencja, która ociepla przestrzeń i nadaje jej bardziej uporządkowany, świadomie zaprojektowany charakter.</p>
               </div>
             </article>
 
@@ -1151,7 +1164,7 @@
               <div class="project-body">
                 <span class="project-kicker">detal</span>
                 <h3>Łazienka – porządek i czystość formy</h3>
-                <p>Neutralne tło, mocniejsza stolarka i dopracowane dodatki tworzą kadr, który wygląda świeżo i bardziej wartościowo.</p>
+                <p class="blur-copy">Neutralne tło, mocniejsza stolarka i dopracowane dodatki tworzą kadr, który wygląda świeżo i bardziej wartościowo.</p>
               </div>
             </article>
 
@@ -1163,7 +1176,7 @@
               <div class="project-body">
                 <span class="project-kicker">stylizacja</span>
                 <h3>Detal, który domyka kompozycję</h3>
-                <p>Starannie dobrane akcesoria pomagają nadać wnętrzu rytm, miękkość i bardziej premium odbiór podczas prezentacji.</p>
+                <p class="blur-copy">Starannie dobrane akcesoria pomagają nadać wnętrzu rytm, miękkość i bardziej premium odbiór podczas prezentacji.</p>
               </div>
             </article>
 
@@ -1175,7 +1188,7 @@
               <div class="project-body">
                 <span class="project-kicker">mood</span>
                 <h3>Strefa wypoczynkowa – lekkość i światło</h3>
-                <p>Miękkie faktury, świeże kolory i bardziej fotogeniczny układ, który wzmacnia emocjonalny odbiór całej nieruchomości.</p>
+                <p class="blur-copy">Miękkie faktury, świeże kolory i bardziej fotogeniczny układ, który wzmacnia emocjonalny odbiór całej nieruchomości.</p>
               </div>
             </article>
           </div>
@@ -1199,7 +1212,7 @@
                 </svg>
               </span>
               <h3>Home staging sprzedażowy</h3>
-              <p>Przygotowanie wnętrza do wejścia na rynek tak, by zdjęcia, prezentacje i oględziny pracowały na korzyść oferty.</p>
+              <p class="blur-copy">Przygotowanie wnętrza do wejścia na rynek tak, by zdjęcia, prezentacje i oględziny pracowały na korzyść oferty.</p>
             </article>
 
             <article class="service-card reveal">
@@ -1212,7 +1225,7 @@
                 </svg>
               </span>
               <h3>Przygotowanie pod wynajem</h3>
-              <p>Uporządkowanie i dopracowanie nieruchomości tak, aby szybciej przyciągała najemców i wyglądała spójnie w ogłoszeniu.</p>
+              <p class="blur-copy">Uporządkowanie i dopracowanie nieruchomości tak, aby szybciej przyciągała najemców i wyglądała spójnie w ogłoszeniu.</p>
             </article>
 
             <article class="service-card reveal">
@@ -1224,7 +1237,7 @@
                 </svg>
               </span>
               <h3>Konsultacje online</h3>
-              <p>Analiza wnętrza, lista rekomendacji i konkretne wskazówki do wdrożenia zdalnie, krok po kroku i bez chaosu.</p>
+              <p class="blur-copy">Analiza wnętrza, lista rekomendacji i konkretne wskazówki do wdrożenia zdalnie, krok po kroku i bez chaosu.</p>
             </article>
 
             <article class="service-card reveal">
@@ -1237,7 +1250,7 @@
                 </svg>
               </span>
               <h3>Współpraca z inwestorami</h3>
-              <p>Estetyka podporządkowana celowi biznesowemu: sprzedaży, wynajmowi lub budowaniu spójnego standardu w kolejnych lokalach.</p>
+              <p class="blur-copy">Estetyka podporządkowana celowi biznesowemu: sprzedaży, wynajmowi lub budowaniu spójnego standardu w kolejnych lokalach.</p>
             </article>
           </div>
         </div>
@@ -1258,7 +1271,7 @@
                 </svg>
               </span>
               <h3>Szybsza sprzedaż</h3>
-              <p>Wnętrze czytelne wizualnie łatwiej przyciąga uwagę i skraca drogę od ogłoszenia do konkretnego zainteresowania.</p>
+              <p class="blur-copy">Wnętrze czytelne wizualnie łatwiej przyciąga uwagę i skraca drogę od ogłoszenia do konkretnego zainteresowania.</p>
             </article>
 
             <article class="reason-card reveal">
@@ -1269,7 +1282,7 @@
                 </svg>
               </span>
               <h3>Wyższa cena</h3>
-              <p>Spójny odbiór jakości pomaga uzasadnić lepszą wycenę i ogranicza wrażenie, że nieruchomość wymaga pilnych poprawek.</p>
+              <p class="blur-copy">Spójny odbiór jakości pomaga uzasadnić lepszą wycenę i ogranicza wrażenie, że nieruchomość wymaga pilnych poprawek.</p>
             </article>
 
             <article class="reason-card reveal">
@@ -1282,7 +1295,7 @@
                 </svg>
               </span>
               <h3>Estetyka premium</h3>
-              <p>Detale, światło i kompozycja budują klimat, który pozwala odczuć większą wartość wnętrza już na pierwszych zdjęciach.</p>
+              <p class="blur-copy">Detale, światło i kompozycja budują klimat, który pozwala odczuć większą wartość wnętrza już na pierwszych zdjęciach.</p>
             </article>
 
             <article class="reason-card reveal">
@@ -1293,7 +1306,7 @@
                 </svg>
               </span>
               <h3>Doświadczenie</h3>
-              <p>Praca z różnymi typami nieruchomości pozwala szybciej ocenić, co naprawdę warto zmienić, a co zostawić w spokoju.</p>
+              <p class="blur-copy">Praca z różnymi typami nieruchomości pozwala szybciej ocenić, co naprawdę warto zmienić, a co zostawić w spokoju.</p>
             </article>
           </div>
         </div>
@@ -1325,7 +1338,7 @@
               </div>
 
               <button class="btn" type="submit">Wyślij</button>
-              <p class="form-note">Formularz jest gotowy wizualnie i w JS. Wystarczy podpiąć finalny adres obsługi wiadomości.</p>
+              <p class="form-note blur-copy">Formularz jest gotowy wizualnie i w JS. Wystarczy podpiąć finalny adres obsługi wiadomości.</p>
               <div class="form-success" id="form-success" role="status" aria-live="polite">
                 Dziękuję. Formularz działa demonstracyjnie i jest gotowy do podpięcia pod Twój docelowy system kontaktowy.
               </div>
@@ -1334,7 +1347,7 @@
 
           <aside class="contact-card reveal">
             <h3>Współpraca</h3>
-            <p class="contact-note">Pracuję z właścicielami mieszkań, inwestorami i klientami przygotowującymi nieruchomość pod sprzedaż lub wynajem. Współpraca może odbywać się stacjonarnie we Wrocławiu albo online.</p>
+            <p class="contact-note blur-copy">Pracuję z właścicielami mieszkań, inwestorami i klientami przygotowującymi nieruchomość pod sprzedaż lub wynajem. Współpraca może odbywać się stacjonarnie we Wrocławiu albo online.</p>
 
             <div class="info-list">
               <div class="info-item">
@@ -1356,7 +1369,7 @@
 
               <div class="info-item">
                 <span>Zakres</span>
-                <p>Home staging sprzedażowy, przygotowanie pod wynajem, konsultacje online i współpraca z inwestorami.</p>
+                <p class="blur-copy">Home staging sprzedażowy, przygotowanie pod wynajem, konsultacje online i współpraca z inwestorami.</p>
               </div>
             </div>
           </aside>

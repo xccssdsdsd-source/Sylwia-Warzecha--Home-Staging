@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://styli-staging.fankoszajr.workers.dev/sitemap.xml

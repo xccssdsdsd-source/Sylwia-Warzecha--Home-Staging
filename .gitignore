@@ -1,1 +1,8 @@
 /.sixth
+.wrangler/
+node_modules/
+.dev.vars
+.dev.vars.*
+.taste-skill/
+*TOKEN*
+.chrome-headless/

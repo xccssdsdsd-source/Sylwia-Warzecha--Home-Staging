@@ -110,11 +110,10 @@ ready(() => {
   if (!form) return
   const status = form.querySelector('.form-status')
   const submit = form.querySelector('button[type="submit"]')
-  const fields = ['name', 'email', 'phone', 'topic', 'message']
+  const fields = ['name', 'email', 'message']
   const messages = {
     name: 'Podaj imię (co najmniej 2 znaki).',
     email: 'Podaj poprawny adres e-mail.',
-    phone: 'Numer telefonu może zawierać cyfry, spacje, +, - i nawiasy.',
     message: 'Napisz kilka zdań o mieszkaniu (co najmniej 10 znaków).'
   }
   const setError = (id, text) => {

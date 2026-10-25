@@ -128,26 +128,42 @@ ready(() => {
     targets.forEach((t) => spy.observe(t))
   }
 
-  const frames = [...document.querySelectorAll('.hero-frames img')]
+  const frames = [...document.querySelectorAll('.hero-frames .frame')]
   const caption = document.querySelector('.hero-caption-text')
+  const progress = document.querySelector('.hero-progress')
   if (frames.length > 1 && !reduce) {
     let current = 0
+    const restart = () => {
+      if (!progress) return
+      progress.classList.remove('is-running')
+      void progress.offsetWidth
+      progress.classList.add('is-running')
+    }
     const next = () => {
       if (document.hidden) return
-      frames[current].classList.remove('is-active')
+      const from = frames[current]
       current = (current + 1) % frames.length
-      const frame = frames[current]
-      if (frame.loading === 'lazy') frame.loading = 'eager'
-      frame.classList.add('is-active')
+      const to = frames[current]
+      const img = to.querySelector('img')
+      if (img.loading === 'lazy') img.loading = 'eager'
+      to.classList.add('is-entering')
+      void to.offsetWidth
+      to.classList.remove('is-entering')
+      to.classList.add('is-active')
+      from.classList.remove('is-active')
+      from.classList.add('is-leaving')
+      setTimeout(() => from.classList.remove('is-leaving'), 1800)
       if (caption) {
         caption.classList.add('is-changing')
         setTimeout(() => {
-          caption.textContent = frame.dataset.caption || ''
+          caption.textContent = img.dataset.caption || ''
           caption.classList.remove('is-changing')
-        }, 400)
+        }, 500)
       }
+      restart()
     }
-    setTimeout(() => frames.slice(1).forEach((f) => { f.loading = 'eager' }), 2500)
+    setTimeout(() => frames.slice(1).forEach((f) => { f.querySelector('img').loading = 'eager' }), 2500)
+    restart()
     setInterval(next, 6500)
   }
 

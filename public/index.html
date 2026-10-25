@@ -28,9 +28,9 @@
   <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/archivo-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/img/salon-kuchnia-jodelka-1600.webp" as="image" type="image/webp" fetchpriority="high" imagesrcset="/img/salon-kuchnia-jodelka-800.webp 800w, /img/salon-kuchnia-jodelka-1600.webp 1600w" imagesizes="(max-width: 860px) 100vw, max(50vw, 133vh)">
-  <link rel="stylesheet" href="/styles.css?v=13">
+  <link rel="stylesheet" href="/styles.css?v=15">
   <script>document.documentElement.classList.add('js')</script>
-  <script src="/app.js?v=13" defer></script>
+  <script src="/app.js?v=15" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -167,11 +167,14 @@
       </div>
       <figure class="hero-photo" aria-hidden="true">
         <div class="hero-frames">
-          <img class="is-active pos-salon" src="/img/salon-kuchnia-jodelka-1600.webp" srcset="/img/salon-kuchnia-jodelka-800.webp 800w, /img/salon-kuchnia-jodelka-1600.webp 1600w" sizes="(max-width: 860px) 100vw, max(50vw, 133vh)" width="1600" height="1200" alt="" data-caption="Projekt inwestycyjny" fetchpriority="high">
-          <img class="pos-komoda" src="/img/komoda-lampa-lisc-1600.webp" srcset="/img/komoda-lampa-lisc-800.webp 800w, /img/komoda-lampa-lisc-1600.webp 1440w" sizes="(max-width: 860px) 100vw, max(50vw, 133vh)" width="1440" height="1440" alt="" data-caption="Stylizacja wnętrza" loading="lazy" decoding="async">
-          <img class="pos-taras" src="/img/taras-roz-1600.webp" srcset="/img/taras-roz-800.webp 800w, /img/taras-roz-1600.webp 1215w" sizes="(max-width: 860px) 100vw, max(50vw, 133vh)" width="1215" height="2160" alt="" data-caption="Taras" loading="lazy" decoding="async">
+          <div class="frame is-active"><img class="pos-salon" src="/img/salon-kuchnia-jodelka-1600.webp" srcset="/img/salon-kuchnia-jodelka-800.webp 800w, /img/salon-kuchnia-jodelka-1600.webp 1600w" sizes="(max-width: 860px) 100vw, max(50vw, 133vh)" width="1600" height="1200" alt="" data-caption="Projekt inwestycyjny" fetchpriority="high"></div>
+          <div class="frame"><img class="pos-komoda" src="/img/komoda-lampa-lisc-1600.webp" srcset="/img/komoda-lampa-lisc-800.webp 800w, /img/komoda-lampa-lisc-1600.webp 1440w" sizes="(max-width: 860px) 100vw, max(50vw, 133vh)" width="1440" height="1440" alt="" data-caption="Stylizacja wnętrza" loading="lazy" decoding="async"></div>
+          <div class="frame"><img class="pos-dom" src="/img/dom-salon-narozna-sofa-full.webp" srcset="/img/dom-salon-narozna-sofa-800.webp 800w, /img/dom-salon-narozna-sofa-full.webp 1080w" sizes="(max-width: 860px) 100vw, max(50vw, 133vh)" width="1080" height="1080" alt="" data-caption="Realizacja domu" loading="lazy" decoding="async"></div>
+          <div class="frame"><img class="pos-taras" src="/img/taras-roz-1600.webp" srcset="/img/taras-roz-800.webp 800w, /img/taras-roz-1600.webp 1215w" sizes="(max-width: 860px) 100vw, max(50vw, 133vh)" width="1215" height="2160" alt="" data-caption="Taras" loading="lazy" decoding="async"></div>
+          <div class="frame"><img class="pos-sypialnia-hero" src="/img/sypialnia-wezglowie-1600.webp" srcset="/img/sypialnia-wezglowie-800.webp 800w, /img/sypialnia-wezglowie-1600.webp 1600w" sizes="(max-width: 860px) 100vw, max(50vw, 133vh)" width="1600" height="1301" alt="" data-caption="Sprzedane" loading="lazy" decoding="async"></div>
+          <div class="frame"><img class="pos-jadalnia" src="/img/salon-jadalnia-jodelka-otwarta-full.webp" srcset="/img/salon-jadalnia-jodelka-otwarta-800.webp 800w, /img/salon-jadalnia-jodelka-otwarta-full.webp 1080w" sizes="(max-width: 860px) 100vw, max(50vw, 133vh)" width="1080" height="1080" alt="" data-caption="Sprzedane" loading="lazy" decoding="async"></div>
         </div>
-        <figcaption class="hero-caption"><span class="hero-caption-text">Projekt inwestycyjny</span><span>Gdynia, Gdańsk, Sopot</span></figcaption>
+        <figcaption class="hero-caption"><span class="hero-caption-text">Projekt inwestycyjny</span><span>Gdynia, Gdańsk, Sopot</span><span class="hero-progress" aria-hidden="true"></span></figcaption>
       </figure>
     </section>
 

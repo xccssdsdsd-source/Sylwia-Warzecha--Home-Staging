@@ -490,22 +490,62 @@ textarea {
   overflow: hidden;
 }
 
-.hero-frames img {
+.frame {
   position: absolute;
   inset: 0;
+  overflow: hidden;
+  transform: translateX(101%);
+}
+
+.frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 1800ms ease;
+  translate: -101% 0;
 }
 
-.hero-frames img.is-active {
-  opacity: 1;
+.frame.is-active,
+.frame.is-leaving,
+.frame.is-entering {
+  transition: transform 1700ms var(--ease-curtain);
+}
+
+.frame.is-active img,
+.frame.is-leaving img,
+.frame.is-entering img {
+  transition: translate 1700ms var(--ease-curtain);
+}
+
+.frame.is-entering,
+.frame.is-entering img {
+  transition: none;
+}
+
+.frame.is-active {
+  z-index: 2;
+  transform: none;
+}
+
+.frame.is-active img {
+  translate: 0 0;
+}
+
+.frame.is-leaving {
+  z-index: 1;
+  transform: translateX(-26%);
+}
+
+.frame.is-leaving img {
+  translate: 0 0;
+}
+
+.frame.is-active img,
+.frame.is-leaving img {
   animation: drift 9s linear both;
 }
 
 .hero-caption {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -518,6 +558,21 @@ textarea {
 
 .hero-caption-text {
   transition: opacity 500ms ease;
+}
+
+.hero-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  block-size: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+.hero-progress.is-running {
+  animation: progress 6500ms linear forwards;
 }
 
 .hero-caption-text.is-changing {
@@ -552,6 +607,10 @@ textarea {
 
 .section-header h2 {
   font-size: var(--t-head);
+}
+
+.work {
+  overflow-x: clip;
 }
 
 .project {
@@ -1875,6 +1934,11 @@ textarea {
   to { opacity: 1; transform: none; }
 }
 
+@keyframes progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
 @keyframes drift {
   from { transform: scale(1.06); }
   to { transform: scale(1); }
@@ -1889,6 +1953,9 @@ textarea {
 .pos-komoda { object-position: 60% 50%; }
 .pos-taras { object-position: 50% 30%; }
 .pos-sypialnia { object-position: 50% 45%; }
+.pos-sypialnia-hero { object-position: 50% 50%; }
+.pos-dom { object-position: 40% 50%; }
+.pos-jadalnia { object-position: 40% 50%; }
 .pos-lastryko { object-position: 40% 50%; }
 
 @media (max-width: 1200px) {

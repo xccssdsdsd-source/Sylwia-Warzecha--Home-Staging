@@ -5,6 +5,20 @@ ready(() => {
 
   requestAnimationFrame(() => document.body.classList.add('is-loaded'))
 
+  document.querySelectorAll('[data-reveal="words"]').forEach((el) => {
+    const words = el.textContent.split(' ').filter(Boolean)
+    el.setAttribute('aria-label', words.join(' '))
+    el.textContent = ''
+    words.forEach((word, i) => {
+      const span = document.createElement('span')
+      span.className = 'w'
+      span.setAttribute('aria-hidden', 'true')
+      span.style.setProperty('--i', String(i))
+      span.textContent = word
+      el.append(span, ' ')
+    })
+  })
+
   const reveals = [...document.querySelectorAll('[data-reveal]')]
   const show = (el) => el.classList.add('is-in')
   if ('IntersectionObserver' in window) {
@@ -14,11 +28,14 @@ ready(() => {
         show(entry.target)
         io.unobserve(entry.target)
       })
-    }, { threshold: 0 })
+    }, { threshold: 0, rootMargin: '0px 0px -9% 0px' })
     reveals.forEach((el) => io.observe(el))
-    const sweep = () => reveals.forEach((el) => {
-      if (!el.classList.contains('is-in') && el.getBoundingClientRect().top < innerHeight) show(el)
-    })
+    const sweep = () => {
+      const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 4
+      reveals.forEach((el) => {
+        if (!el.classList.contains('is-in') && (atEnd || el.getBoundingClientRect().top < innerHeight * 0.91)) show(el)
+      })
+    }
     let ticking = false
     addEventListener('scroll', () => {
       if (ticking) return
@@ -28,6 +45,34 @@ ready(() => {
     addEventListener('hashchange', sweep)
   } else {
     reveals.forEach(show)
+  }
+
+  const floats = [...document.querySelectorAll('.project-main img, .project-detail img')]
+  if (!reduce && floats.length && 'IntersectionObserver' in window) {
+    const live = new Set()
+    const watch = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) live.add(entry.target)
+        else live.delete(entry.target)
+      })
+      glide()
+    }, { rootMargin: '10% 0px 10% 0px' })
+    floats.forEach((img) => watch.observe(img))
+    let gliding = false
+    function glide() {
+      if (gliding) return
+      gliding = true
+      requestAnimationFrame(() => {
+        gliding = false
+        live.forEach((img) => {
+          const box = img.getBoundingClientRect()
+          const t = (box.top + box.height / 2 - innerHeight / 2) / (innerHeight / 2 + box.height / 2)
+          img.style.setProperty('--py', (Math.max(-1, Math.min(1, t)) * -3).toFixed(2) + '%')
+        })
+      })
+    }
+    addEventListener('scroll', glide, { passive: true })
+    addEventListener('resize', glide)
   }
 
   const bar = document.querySelector('.bar')
@@ -106,13 +151,75 @@ ready(() => {
     setInterval(next, 6500)
   }
 
+  const viewer = document.querySelector('.viewer')
+  const shots = [...document.querySelectorAll('.shot')]
+  if (viewer && shots.length && typeof viewer.showModal === 'function') {
+    const vImg = viewer.querySelector('.viewer-img')
+    const vText = viewer.querySelector('.viewer-text')
+    const vCount = viewer.querySelector('.viewer-count')
+    let set = []
+    let index = 0
+    let startX = null
+    let opener = null
+    const render = () => {
+      const shot = set[index]
+      const img = shot.querySelector('img')
+      const title = shot.closest('.project')?.querySelector('h3')
+      vImg.src = shot.href
+      vImg.alt = img ? img.alt : ''
+      vText.textContent = title ? title.textContent : ''
+      vCount.textContent = set.length > 1 ? (index + 1) + ' / ' + set.length : ''
+    }
+    const go = (step) => {
+      if (set.length < 2) return
+      index = (index + step + set.length) % set.length
+      if (reduce) return render()
+      vImg.classList.add('is-changing')
+      setTimeout(render, 200)
+    }
+    vImg.addEventListener('load', () => vImg.classList.remove('is-changing'))
+    shots.forEach((shot) => shot.addEventListener('click', (e) => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return
+      e.preventDefault()
+      const project = shot.closest('.project')
+      set = project ? [...project.querySelectorAll('.shot')] : [shot]
+      index = set.indexOf(shot)
+      opener = shot
+      viewer.classList.toggle('is-single', set.length < 2)
+      vImg.classList.remove('is-changing')
+      render()
+      viewer.showModal()
+    }))
+    viewer.querySelector('.viewer-prev').addEventListener('click', () => go(-1))
+    viewer.querySelector('.viewer-next').addEventListener('click', () => go(1))
+    viewer.querySelector('.viewer-close').addEventListener('click', () => viewer.close())
+    viewer.addEventListener('close', () => {
+      if (opener) opener.focus({ preventScroll: true })
+    })
+    viewer.addEventListener('click', (e) => {
+      if (e.target === viewer || e.target.classList.contains('viewer-figure')) viewer.close()
+    })
+    viewer.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') go(-1)
+      if (e.key === 'ArrowRight') go(1)
+    })
+    viewer.addEventListener('pointerdown', (e) => { startX = e.pointerType === 'mouse' ? null : e.clientX })
+    viewer.addEventListener('pointerup', (e) => {
+      if (startX === null) return
+      const dx = e.clientX - startX
+      startX = null
+      if (Math.abs(dx) > 48) go(dx < 0 ? 1 : -1)
+    })
+  }
+
   const form = document.querySelector('#formularz')
   if (!form) return
   const status = form.querySelector('.form-status')
   const submit = form.querySelector('button[type="submit"]')
-  const fields = ['name', 'email', 'message']
+  const fields = ['name', 'phone', 'email', 'message']
   const messages = {
     name: 'Podaj imię (co najmniej 2 znaki).',
+    phone: 'Podaj poprawny numer telefonu albo zostaw to pole puste.',
     email: 'Podaj poprawny adres e-mail.',
     message: 'Napisz kilka zdań o mieszkaniu (co najmniej 10 znaków).'
   }

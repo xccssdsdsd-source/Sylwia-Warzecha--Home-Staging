@@ -1659,6 +1659,222 @@ textarea {
   scale: 0.98;
 }
 
+.js [data-reveal='fade'] {
+  transform: none;
+  transition-duration: 1700ms, 1ms;
+}
+
+.js [data-reveal='scale'] {
+  transform: translateY(14px) scale(0.95);
+  transform-origin: 50% 100%;
+  transition-duration: 1500ms, 2000ms;
+}
+
+.js [data-curtain='side']::after {
+  transform-origin: 100% 50%;
+}
+
+.js [data-curtain='side'].is-in::after {
+  transform: scaleX(0);
+}
+
+.js [data-curtain='side'] img {
+  transform: translateX(-4%) scale(1.08);
+}
+
+.js [data-curtain='up']::after {
+  transform-origin: 50% 100%;
+}
+
+.js [data-curtain='up'] img {
+  transform: translateY(-3%) scale(1.1);
+}
+
+.js [data-reveal='step']:not(.is-in) > .step-n {
+  transform: translateX(-18px);
+}
+
+@media (min-width: 861px) {
+  .js .project-text [data-reveal] {
+    transform: translateX(34px);
+  }
+
+  .js .project-flip .project-text [data-reveal] {
+    transform: translateX(-34px);
+  }
+
+  .js .project-text [data-reveal].is-in {
+    transform: none;
+  }
+}
+
+.faq-list {
+  padding: 0 clamp(28px, 4.5vw, 72px);
+  background: var(--sheet);
+  box-shadow: var(--shadow-soft);
+}
+
+.faq-item + .faq-item {
+  border-top: 1px solid var(--line);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 44px;
+  padding-block: clamp(24px, 2.6vw, 36px);
+  font-family: var(--serif);
+  font-size: clamp(1.375rem, 1.1rem + 1vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-family: var(--sans);
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--accent);
+  transition: transform 400ms var(--ease);
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item summary:hover {
+  color: var(--accent);
+}
+
+.faq-item summary:active {
+  opacity: 0.7;
+}
+
+.faq-item summary:focus-visible {
+  outline-offset: -2px;
+}
+
+.faq-answer {
+  max-width: 44rem;
+  padding-bottom: clamp(24px, 2.6vw, 36px);
+  color: var(--ink-2);
+}
+
+.faq-item[open] .faq-answer {
+  animation: faq-in 600ms var(--ease-soft) both;
+}
+
+.consent {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 40;
+  display: grid;
+  gap: 12px;
+  width: min(26rem, calc(100vw - 40px));
+  padding: 22px 24px 24px;
+  background: var(--sheet);
+  box-shadow: 0 1px 2px rgb(74 46 37 / 0.06), 0 20px 50px -12px rgb(74 46 37 / 0.35);
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 600ms var(--ease-soft), transform 800ms var(--ease-soft);
+}
+
+.consent[hidden] {
+  display: none;
+}
+
+.consent.is-open {
+  opacity: 1;
+  transform: none;
+}
+
+.consent-title {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.consent p {
+  font-size: var(--t-small);
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+.consent-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.consent-btn {
+  min-height: 48px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-size: var(--t-small);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 220ms ease, color 220ms ease, transform 200ms var(--ease);
+}
+
+.consent-btn[data-consent='granted'] {
+  background: var(--accent);
+  color: var(--on-dark);
+}
+
+.consent-btn:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: var(--on-dark);
+}
+
+.consent-btn:active {
+  transform: scale(0.97);
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+}
+
+.legal-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-block: -11px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.legal-btn:hover {
+  text-decoration-thickness: 2px;
+}
+
+.legal-foot .legal-btn {
+  margin-left: 16px;
+}
+
+@keyframes faq-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
+}
+
 @keyframes drift {
   from { transform: scale(1.06); }
   to { transform: scale(1); }
@@ -2088,6 +2304,14 @@ textarea {
 
   .viewer-caption {
     padding-inline: 8px;
+  }
+
+  .consent {
+    left: 12px;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    width: auto;
+    padding: 20px 20px 20px;
   }
 }
 

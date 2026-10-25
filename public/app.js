@@ -212,6 +212,41 @@ ready(() => {
     })
   }
 
+  const consent = document.querySelector('.consent')
+  if (consent) {
+    const KEY = 'styli-consent'
+    const read = () => {
+      try { return localStorage.getItem(KEY) } catch { return null }
+    }
+    const write = (value) => {
+      try { localStorage.setItem(KEY, value) } catch {}
+    }
+    const apply = (value) => {
+      document.documentElement.dataset.consent = value
+      document.dispatchEvent(new CustomEvent('consentchange', { detail: value }))
+    }
+    const open = () => {
+      consent.hidden = false
+      requestAnimationFrame(() => requestAnimationFrame(() => consent.classList.add('is-open')))
+    }
+    const close = () => {
+      consent.classList.remove('is-open')
+      setTimeout(() => { consent.hidden = true }, reduce ? 0 : 700)
+    }
+    const saved = read()
+    if (saved === 'granted' || saved === 'denied') apply(saved)
+    else setTimeout(open, reduce ? 0 : 1600)
+    consent.querySelectorAll('[data-consent]').forEach((button) => button.addEventListener('click', () => {
+      write(button.dataset.consent)
+      apply(button.dataset.consent)
+      close()
+    }))
+    document.querySelectorAll('[data-consent-open]').forEach((button) => button.addEventListener('click', () => {
+      open()
+      consent.querySelector('[data-consent]').focus({ preventScroll: true })
+    }))
+  }
+
   const form = document.querySelector('#formularz')
   if (!form) return
   const status = form.querySelector('.form-status')

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Polityka prywatności | STYLI STAGING</title>
-  <meta name="description" content="Jakie dane zbiera strona STYLI STAGING, po co i jak długo je przechowuje. Bez cookies i bez śledzenia.">
+  <meta name="description" content="Jakie dane zbiera strona STYLI STAGING, po co i jak długo je przechowuje. Zgoda na pomiar odwiedzin jest dobrowolna.">
   <meta name="theme-color" content="#faf6ef">
   <link rel="canonical" href="/polityka-prywatnosci">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -12,9 +12,9 @@
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/archivo-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=12">
+  <link rel="stylesheet" href="/styles.css?v=13">
   <script>document.documentElement.classList.add('js')</script>
-  <script src="/app.js?v=12" defer></script>
+  <script src="/app.js?v=13" defer></script>
 </head>
 <body>
   <a class="skip" href="#tresc">Przejdź do treści</a>
@@ -68,8 +68,9 @@
     </section>
 
     <section aria-labelledby="cookies">
-      <h2 id="cookies">Bez cookies i bez śledzenia</h2>
-      <p>Strona nie używa plików cookies, narzędzi analitycznych ani pikseli śledzących. Dlatego nie zobaczysz tu banera ze zgodą na cookies.</p>
+      <h2 id="cookies">Cookies i pomiar odwiedzin</h2>
+      <p>Strona nie używa plików cookies. W pamięci przeglądarki (localStorage) zapisuję tylko Twój wybór z banera prywatności, bez danych osobowych, żeby nie pytać Cię przy każdej wizycie.</p>
+      <p>Chcę mierzyć odwiedziny za pomocą Google Analytics. Uruchomię to narzędzie wyłącznie po Twojej zgodzie. Jeśli klikniesz „Odrzucam”, nic nie jest mierzone. Wybór możesz zmienić w każdej chwili przyciskiem „Ustawienia prywatności” na dole strony.</p>
       <p>Czcionki są na tym samym serwerze co strona, więc Twoja przeglądarka nie łączy się z Google Fonts.</p>
     </section>
 
@@ -100,7 +101,16 @@
   </main>
 
   <footer class="legal-foot">
-    <p>© 2026 Sylwia Warzecha</p>
+    <p>© 2026 Sylwia Warzecha <button class="legal-btn" type="button" data-consent-open>Ustawienia prywatności</button></p>
   </footer>
+
+  <section class="consent" id="zgoda" role="region" aria-labelledby="consent-title" hidden>
+    <h2 class="consent-title" id="consent-title">Twoja prywatność</h2>
+    <p>Chcę mierzyć odwiedziny na stronie (Google Analytics), żeby wiedzieć, co działa. Robię to tylko za Twoją zgodą. Bez niej nic nie jest zbierane. <a class="text-link" href="/polityka-prywatnosci">Polityka prywatności</a></p>
+    <div class="consent-actions">
+      <button class="consent-btn" type="button" data-consent="denied">Odrzucam</button>
+      <button class="consent-btn" type="button" data-consent="granted">Akceptuję</button>
+    </div>
+  </section>
 </body>
 </html>

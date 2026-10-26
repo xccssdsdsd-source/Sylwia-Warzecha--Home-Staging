@@ -9,17 +9,15 @@ const TOPICS = new Set(['sprzedaz', 'wynajem', 'konsultacja', 'inwestor', 'inne'
 
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo='",
+  "script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://www.googletagmanager.com",
   "style-src 'self'",
   "font-src 'self'",
-  "img-src 'self' data:",
-  "connect-src 'self'",
+  "img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com",
+  "connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com",
   "form-action 'self'",
   "frame-ancestors 'none'",
   "base-uri 'none'",
   "object-src 'none'",
-  "require-trusted-types-for 'script'",
-  "trusted-types 'none'",
   'upgrade-insecure-requests'
 ].join('; ')
 

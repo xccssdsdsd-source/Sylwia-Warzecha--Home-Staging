@@ -1,3 +1,4 @@
+const CANONICAL_HOST = 'stylistaging.pl'
 const MAX_BODY_BYTES = 10 * 1024
 const MESSAGE_TTL_SECONDS = 180 * 24 * 60 * 60
 const RATE_LIMIT_MAX = 5
@@ -84,6 +85,10 @@ async function route(request, env) {
   const url = new URL(request.url)
   if (url.protocol === 'http:') {
     url.protocol = 'https:'
+    return Response.redirect(url.toString(), 301)
+  }
+  if (url.hostname.endsWith('.workers.dev')) {
+    url.hostname = CANONICAL_HOST
     return Response.redirect(url.toString(), 301)
   }
   const path = url.pathname

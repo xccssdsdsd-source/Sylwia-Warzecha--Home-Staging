@@ -1,4 +1,4 @@
 Contact: https://www.instagram.com/styli_staging/
 Expires: 2027-10-23T00:00:00.000Z
 Preferred-Languages: pl, en
-Canonical: https://styli-staging.fankoszajr.workers.dev/.well-known/security.txt
+Canonical: https://stylistaging.pl/.well-known/security.txt

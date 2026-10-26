@@ -1038,6 +1038,34 @@ textarea {
   border-top: 1px solid var(--line);
 }
 
+.reviews-more summary {
+  display: block;
+  width: fit-content;
+  margin-block: 0 clamp(28px, 3vw, 44px);
+  cursor: pointer;
+  list-style: none;
+}
+
+.reviews-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.reviews-more summary:hover {
+  text-decoration-thickness: 2px;
+}
+
+.reviews-more summary:active {
+  opacity: 0.7;
+}
+
+.reviews-more[open] summary {
+  display: none;
+}
+
+.reviews-more .review {
+  border-top: 1px solid var(--line);
+}
+
 .review-author {
   position: sticky;
   top: calc(var(--bar-h) + 40px);

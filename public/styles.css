@@ -856,6 +856,22 @@ textarea {
   font-variant-numeric: lining-nums;
 }
 
+.offer-price-from {
+  font-size: var(--t-lead);
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.offer-cta {
+  max-width: 44rem;
+  margin: clamp(40px, 5vw, 72px) auto 0;
+  text-align: center;
+  font-size: var(--t-lead);
+  font-family: var(--serif);
+  font-weight: 300;
+  line-height: 1.35;
+}
+
 .offer-price-text {
   font-size: var(--t-lead);
   letter-spacing: -0.015em;

@@ -1,10 +1,5 @@
 const ready = (fn) => document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', fn) : fn()
 
-const GA_ID = 'G-S73C88HG2Z'
-
-window.dataLayer = window.dataLayer || []
-function gtag() { window.dataLayer.push(arguments) }
-
 ready(() => {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
@@ -242,21 +237,7 @@ ready(() => {
     const write = (value) => {
       try { localStorage.setItem(KEY, value) } catch {}
     }
-    const live = /(^|\.)stylistaging\.pl$/.test(location.hostname)
-    let loaded = false
-    const startAnalytics = () => {
-      window['ga-disable-' + GA_ID] = false
-      if (loaded || !live) return
-      loaded = true
-      const script = document.createElement('script')
-      script.async = true
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID
-      document.head.append(script)
-      gtag('js', new Date())
-      gtag('config', GA_ID)
-    }
-    const stopAnalytics = () => {
-      window['ga-disable-' + GA_ID] = true
+    const clearAnalyticsCookies = () => {
       const host = location.hostname
       document.cookie.split(';').map((c) => c.split('=')[0].trim()).filter((n) => n === '_ga' || n.startsWith('_ga_')).forEach((name) => {
         document.cookie = name + '=; Max-Age=0; path=/'
@@ -266,8 +247,8 @@ ready(() => {
     }
     const apply = (value) => {
       document.documentElement.dataset.consent = value
-      if (value === 'granted') startAnalytics()
-      else stopAnalytics()
+      if (typeof gtag === 'function') gtag('consent', 'update', { analytics_storage: value })
+      if (value === 'denied') clearAnalyticsCookies()
       document.dispatchEvent(new CustomEvent('consentchange', { detail: value }))
     }
     const open = () => {

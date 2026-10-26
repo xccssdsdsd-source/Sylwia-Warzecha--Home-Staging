@@ -9,7 +9,7 @@ const TOPICS = new Set(['sprzedaz', 'wynajem', 'konsultacja', 'inwestor', 'inne'
 
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://www.googletagmanager.com",
+  "script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' 'sha256-fjvNNFqtNy746CnrOr8o77hFN2XhxNWY8WDkfi3QSpg=' https://www.googletagmanager.com",
   "style-src 'self'",
   "font-src 'self'",
   "img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com",

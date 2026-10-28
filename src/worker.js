@@ -101,6 +101,12 @@ async function route(request, env) {
     return new Response(null, { status: 405, headers: { Allow: 'GET, HEAD' } })
   }
 
+  const clean = path.replace(/\/index\.html$/, '/').replace(/(.)\.html$/, '$1').replace(/(.)\/$/, '$1')
+  if (clean !== path) {
+    url.pathname = clean
+    return Response.redirect(url.toString(), 301)
+  }
+
   const asset = await env.ASSETS.fetch(request)
   const res = new Response(asset.body, asset)
   const ct = res.headers.get('Content-Type')

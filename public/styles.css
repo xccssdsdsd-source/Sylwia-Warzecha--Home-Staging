@@ -1682,42 +1682,23 @@ textarea {
 .js .hero-top,
 .js .hero-services,
 .js .hero-actions {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 1000ms var(--ease-soft), transform 1100ms var(--ease-soft);
+  animation: hero-rise 1000ms var(--ease-soft) both;
 }
 
 .js .hero-services {
-  transition-delay: 620ms;
+  animation-delay: 620ms;
 }
 
 .js .hero-actions {
-  transition-delay: 740ms;
+  animation-delay: 740ms;
 }
 
 .js .hero-logo {
-  opacity: 0;
-  transform: scale(0.94);
-  transition: opacity 1400ms var(--ease-soft) 80ms, transform 1600ms var(--ease-soft) 80ms;
+  animation: hero-logo 1400ms var(--ease-soft) 80ms both;
 }
 
 .js .hero-tagline {
-  clip-path: inset(0 -10% 100% -10%);
-  transform: translateY(0.3em);
-  transition: clip-path 1300ms var(--ease-soft) 340ms, transform 1300ms var(--ease-soft) 340ms;
-}
-
-.js .is-loaded .hero-top,
-.js .is-loaded .hero-services,
-.js .is-loaded .hero-actions,
-.js .is-loaded .hero-logo {
-  opacity: 1;
-  transform: none;
-}
-
-.js .is-loaded .hero-tagline {
-  clip-path: inset(-20% -10% -30% -10%);
-  transform: none;
+  animation: hero-tagline 1300ms var(--ease-soft) 340ms both;
 }
 
 .js .hero-photo::after {
@@ -1727,11 +1708,27 @@ textarea {
   z-index: 2;
   background: var(--bg);
   transform-origin: 100% 50%;
-  transition: transform 1500ms var(--ease-curtain) 200ms;
+  animation: hero-curtain 1500ms var(--ease-curtain) 200ms both;
 }
 
-.js .is-loaded .hero-photo::after {
-  transform: scaleX(0);
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes hero-logo {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes hero-tagline {
+  from { clip-path: inset(0 -10% 100% -10%); transform: translateY(0.3em); }
+  to { clip-path: inset(-20% -10% -30% -10%); transform: none; }
+}
+
+@keyframes hero-curtain {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
 }
 
 .project-main img,
@@ -2169,14 +2166,12 @@ textarea {
   }
 
   .js .hero-sheet {
-    opacity: 0;
-    transform: translateY(48px);
-    transition: opacity 1100ms var(--ease-soft) 500ms, transform 1500ms var(--ease-soft) 500ms;
+    animation: hero-sheet 1500ms var(--ease-soft) 500ms both;
   }
 
-  .js .is-loaded .hero-sheet {
-    opacity: 1;
-    transform: none;
+  @keyframes hero-sheet {
+    from { opacity: 0; transform: translateY(48px); }
+    to { opacity: 1; transform: none; }
   }
 
   .bar {

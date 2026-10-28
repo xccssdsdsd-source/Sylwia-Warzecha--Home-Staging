@@ -41,7 +41,7 @@
   <link rel="preload" href="/fonts/newsreader-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/archivo-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=19">
+  <link rel="stylesheet" href="/styles.css?v=20">
   <script>document.documentElement.classList.add('js')</script>
   <script src="/app.js?v=17" defer></script>
   <script type="application/ld+json">
@@ -172,12 +172,33 @@
       </div>
     </section>
 
-    <section class="area-cta" aria-labelledby="cta-title">
-      <h2 id="cta-title">Chcesz poznać cenę dla swojej nieruchomości?</h2>
-      <div class="area-cta-actions">
-        <a class="button" href="/#kontakt">Umów konsultację <span class="button-arrow" aria-hidden="true">→</span></a>
-        <a class="text-link" href="tel:+48574180397">574 180 397</a>
+    <section class="subcontact" id="kontakt" aria-labelledby="cta-title">
+      <div class="subcontact-intro">
+        <h2 id="cta-title">Chcesz poznać cenę dla swojej nieruchomości?</h2>
+        <p>Napisz kilka zdań o nieruchomości albo zadzwoń. Konsultacja kosztuje 300&nbsp;zł, a&nbsp;wycenę stylizacji przygotuję po poznaniu zakresu.</p>
+        <ul class="subcontact-lines">
+          <li><a href="tel:+48574180397"><span class="visually-hidden">Telefon: </span>574 180 397</a></li>
+          <li><a href="mailto:stylistaging@gmail.com"><span class="visually-hidden">E-mail: </span>stylistaging@gmail.com</a></li>
+        </ul>
+        <ul class="subcontact-social">
+          <li><a class="text-link" href="https://www.instagram.com/styli_staging/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+          <li><a class="text-link" href="https://www.facebook.com/p/Styli-staging-Home-staging-i-stylizacja-wn%C4%99trz-61585119353043/" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+          <li><a class="text-link" href="https://www.pinterest.com/stylistaging/" rel="noopener noreferrer" target="_blank">Pinterest</a></li>
+        </ul>
+        <p class="subcontact-area">STYLI STAGING, Gdynia. Działam w&nbsp;Trójmieście i&nbsp;online.</p>
       </div>
+      <form class="form" id="formularz" action="/api/contact" method="post" novalidate>
+        <div class="field"><label for="name">Imię</label><input id="name" name="name" type="text" autocomplete="given-name" minlength="2" maxlength="80" required aria-describedby="name-error"><p class="field-error" id="name-error"></p></div>
+        <div class="field"><label for="phone">Telefon <span>(opcjonalnie)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" pattern="[0-9 +()\-]{6,30}" aria-describedby="phone-error"><p class="field-error" id="phone-error"></p></div>
+        <div class="field field-wide"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="120" required aria-describedby="email-error"><p class="field-error" id="email-error"></p></div>
+        <div class="field field-wide"><label for="message">Wiadomość</label><textarea id="message" name="message" rows="4" minlength="10" maxlength="2000" required aria-describedby="message-error"></textarea><p class="field-error" id="message-error"></p></div>
+        <div class="form-trap" aria-hidden="true"><label for="website">Strona www</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="form-foot">
+          <button class="button" type="submit">Wyślij wiadomość <span class="button-arrow" aria-hidden="true">→</span></button>
+          <p class="form-note"><a class="text-link" href="/polityka-prywatnosci">Polityka prywatności</a></p>
+        </div>
+        <p class="form-status" role="status"></p>
+      </form>
     </section>
 
     <section aria-labelledby="blisko">

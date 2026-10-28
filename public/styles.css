@@ -2527,3 +2527,136 @@ textarea {
     display: none;
   }
 }
+
+.footer-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 24px;
+  margin-top: clamp(32px, 4vw, 48px);
+  padding-top: 20px;
+  border-top: 1px solid rgb(247 239 232 / 0.18);
+  color: var(--on-dark-muted);
+  font-size: var(--t-small);
+}
+
+.footer-area ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.footer-area a {
+  display: inline-block;
+  padding: 11px 0;
+  text-decoration: none;
+}
+
+.footer-area a:hover {
+  color: var(--on-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.area-crumbs {
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: var(--t-small);
+}
+
+.area-crumbs a {
+  display: inline-block;
+  padding: 11px 0;
+}
+
+.legal .area-links,
+.legal .area-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+}
+
+.legal .area-links li,
+.legal .area-list li {
+  padding-left: 0;
+}
+
+.legal .area-links li::before,
+.legal .area-list li::before {
+  display: none;
+}
+
+.legal .area-links a {
+  display: inline-block;
+  padding: 11px 0;
+}
+
+.legal .area-list {
+  display: grid;
+  gap: 0;
+}
+
+.legal .area-list li {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) 1fr;
+  align-items: baseline;
+  gap: 4px 24px;
+  padding-block: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.legal .area-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.legal .area-list a {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.legal .area-list span {
+  color: var(--ink-2);
+}
+
+.legal .area-cta h2 {
+  max-width: 20ch;
+}
+
+.area-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 32px;
+}
+
+.area-all {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 20px;
+  margin-bottom: 20px;
+}
+
+.area-all ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 18px;
+}
+
+.area-all a {
+  display: inline-block;
+  padding: 11px 0;
+  text-decoration: none;
+}
+
+.area-all a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+@media (max-width: 560px) {
+  .legal .area-list li {
+    grid-template-columns: 1fr;
+  }
+}

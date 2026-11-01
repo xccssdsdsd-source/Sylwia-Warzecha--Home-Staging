@@ -2743,3 +2743,25 @@ textarea {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.legal > .page-photo {
+  max-width: 760px;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+.page-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: 50% 40%;
+  border-radius: 4px;
+  background: var(--surface);
+}
+
+.page-photo figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: var(--t-small);
+}

@@ -85,7 +85,7 @@ async function route(request, env) {
     url.protocol = 'https:'
     return Response.redirect(url.toString(), 301)
   }
-  if (url.hostname.endsWith('.workers.dev')) {
+  if (url.hostname.endsWith('.workers.dev') || url.hostname === `www.${CANONICAL_HOST}`) {
     url.hostname = CANONICAL_HOST
     return Response.redirect(url.toString(), 301)
   }
@@ -101,7 +101,7 @@ async function route(request, env) {
     return new Response(null, { status: 405, headers: { Allow: 'GET, HEAD' } })
   }
 
-  const clean = path.replace(/\/index\.html$/, '/').replace(/(.)\.html$/, '$1').replace(/(.)\/$/, '$1')
+  const clean = path.replace(/\/index\.html\/?$/, '/').replace(/(.)(?:\.html)?\/+$/, '$1').replace(/(.)\.html$/, '$1').replace(/\/{2,}/g, '/')
   if (clean !== path) {
     url.pathname = clean
     return Response.redirect(url.toString(), 301)

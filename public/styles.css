@@ -2743,3 +2743,22 @@ textarea {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.legal .post-figure {
+  margin: 8px 0 40px;
+  max-width: 720px;
+}
+
+.legal .post-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.legal .post-meta {
+  margin-top: 16px;
+  color: var(--ink-2);
+  font-size: var(--t-small);
+}

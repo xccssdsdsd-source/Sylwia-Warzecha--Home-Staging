@@ -696,6 +696,41 @@ textarea {
   aspect-ratio: 4 / 5;
 }
 
+.project-extra {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--gap);
+  margin-top: clamp(40px, 5vw, 72px);
+}
+
+.project-extra figure {
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.project-extra img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.project-extra figcaption {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  padding: 4px 10px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 .shot {
   position: relative;
   display: block;
@@ -2274,6 +2309,11 @@ textarea {
   .project-text h3,
   .step h3 {
     font-size: clamp(1.75rem, 8.2vw, 2.25rem);
+  }
+
+  .project-extra {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 40px;
   }
 
   .details-1 {

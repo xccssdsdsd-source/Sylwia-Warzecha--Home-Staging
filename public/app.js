@@ -183,7 +183,8 @@ ready(() => {
       const title = shot.closest('.project')?.querySelector('h3')
       vImg.src = shot.href
       vImg.alt = img ? img.alt : ''
-      vText.textContent = title ? title.textContent : ''
+      const tag = shot.closest('figure')?.querySelector('figcaption')
+      vText.textContent = (title ? title.textContent : '') + (tag ? ' · ' + tag.textContent : '')
       vCount.textContent = set.length > 1 ? (index + 1) + ' / ' + set.length : ''
     }
     const go = (step) => {

@@ -706,15 +706,15 @@ textarea {
 }
 
 .project-extra figure {
+  position: relative;
   overflow: hidden;
   background: var(--surface);
   box-shadow: var(--shadow);
-  position: relative;
 }
 
 .project-extra img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
@@ -722,13 +722,18 @@ textarea {
   position: absolute;
   left: 12px;
   top: 12px;
-  padding: 4px 10px;
-  background: var(--surface);
-  color: var(--muted);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  z-index: 2;
+  padding: 5px 11px 4px;
+  background: var(--sheet);
+  color: var(--ink);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   pointer-events: none;
+}
+
+.details-wide .project-detail img {
+  aspect-ratio: 16 / 10;
 }
 
 .shot {
@@ -1805,6 +1810,47 @@ textarea {
   transition-duration: 1500ms, 2000ms;
 }
 
+.js .project-extra figure:nth-child(4n + 2)::after,
+.js .project-extra figure:nth-child(4n + 2) img {
+  transition-delay: 120ms;
+}
+
+.js .project-extra figure:nth-child(4n + 3)::after,
+.js .project-extra figure:nth-child(4n + 3) img {
+  transition-delay: 240ms;
+}
+
+.js .project-extra figure:nth-child(4n)::after,
+.js .project-extra figure:nth-child(4n) img {
+  transition-delay: 360ms;
+}
+
+.js .project-extra figcaption {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 700ms var(--ease-soft) 900ms, transform 700ms var(--ease-soft) 900ms;
+}
+
+.js .project-extra .is-in figcaption {
+  opacity: 1;
+  transform: none;
+}
+
+@media (hover: hover) {
+  .work .shot img {
+    transition: transform 2600ms var(--ease-soft), scale 900ms var(--ease-soft);
+  }
+
+  .work .shot:hover img {
+    scale: 1.13;
+    transition-delay: 0ms;
+  }
+
+  .work .project-extra .shot:hover img {
+    scale: 1.05;
+  }
+}
+
 .js [data-curtain='side']::after {
   transform-origin: 100% 50%;
 }
@@ -2313,7 +2359,18 @@ textarea {
 
   .project-extra {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
     margin-top: 40px;
+  }
+
+  .js .project-extra figure:nth-child(odd)::after,
+  .js .project-extra figure:nth-child(odd) img {
+    transition-delay: 0ms;
+  }
+
+  .js .project-extra figure:nth-child(even)::after,
+  .js .project-extra figure:nth-child(even) img {
+    transition-delay: 140ms;
   }
 
   .details-1 {

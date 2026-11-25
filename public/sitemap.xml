@@ -1,10 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://stylistaging.pl/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/salon-kuchnia-jodelka-1600.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/komoda-lampa-lisc-1600.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/dom-salon-narozna-sofa-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/taras-roz-1600.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/sypialnia-wezglowie-1600.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/salon-jadalnia-jodelka-otwarta-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/lazienka-lustro-organiczne-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/wroclaw-salon-aneks-zielony-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/wroclaw-sypialnia-rattan-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/wynajem-salon-kuchnia-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/wynajem-sypialnia-biurko-okno-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/inwestycja-kuchnia-bordowa-lampa-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/inwestycja-sypialnia-tapeta-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/inwestycja-lazienka-lastryko-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/dom-kuchnia-jadalnia-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/dom-lazienka-wanna-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/dom-lazienka-prysznic-miedz-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/brzozowa/po/salon-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/brzozowa/po/sypialnia-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/brzozowa/przed/balkon-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/brzozowa/po/balkon-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/brzozowa/przed/pokoj-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/brzozowa/po/pokoj-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/brzozowa/przed/lazienka-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/brzozowa/po/lazienka-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/brzozowa/przed/sypialnia-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/brzozowa/przed/kuchnia-full.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/sylwia-o-mnie-1200.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stylistaging.pl/obszar-dzialania</loc>
@@ -47,6 +131,9 @@
     <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/salon-kuchnia-jodelka-800.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stylistaging.pl/home-staging-gdansk</loc>
@@ -131,29 +218,44 @@
     <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/inwestycja-kuchnia-bordowa-lampa-full.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stylistaging.pl/blog/home-staging-przed-sprzedaza-czy-sie-oplaca</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/salon-jadalnia-jodelka-otwarta-full.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stylistaging.pl/blog/mieszkanie-pod-wynajem-krotkoterminowy-jak-przygotowac</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/wynajem-salon-kuchnia-full.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stylistaging.pl/blog/home-staging-a-sesja-zdjeciowa-nieruchomosci</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/komoda-lampa-lisc-800.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stylistaging.pl/blog/10-bledow-sprzedajacych-mieszkanie</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://stylistaging.pl/img/sypialnia-wezglowie-800.webp</image:loc>
+    </image:image>
   </url>
 </urlset>
